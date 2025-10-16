@@ -1,0 +1,7 @@
+### Send POST request with json body
+POST http://localhost:3000/api/completion
+Content-Type: application/json
+
+{
+  "prompt": "Explain what is LLM in one paragraph"
+}
