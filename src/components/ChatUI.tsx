@@ -126,7 +126,7 @@ const ChatUI: FC<IChatUIProps> = ({
                 }`}
               disabled={busy ? false : !inputChat.trim().length}
             >
-              {busy ? 'Stop' : 'Send'}
+              {busy ? <span>&#9725;</span> : <span>&#9654;</span>}
             </button>
           </div>
         </form>
