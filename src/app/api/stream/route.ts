@@ -1,8 +1,8 @@
 import { LanguageModelV2Usage } from '@ai-sdk/provider';
 import { streamText } from 'ai';
-// import { openai } from '@ai-sdk/openai';
+import { openai } from '@ai-sdk/openai';
 
-import { google } from '@ai-sdk/google'
+// import { google } from '@ai-sdk/google'
 // import { NextResponse } from 'next/server';
 
 export const POST = async (req: Request) => {
@@ -10,8 +10,8 @@ export const POST = async (req: Request) => {
     const { prompt } = await req.json();
   
     const result = streamText({
-      // model: openai('gpt-5-nano'),
-      model: google('gemini-2.0-flash-lite'),
+      model: openai('gpt-5-nano'),
+      // model: google('gemini-2.0-flash-lite'),
       prompt,
     })
     
